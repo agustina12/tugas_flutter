@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -40,17 +42,42 @@ class TugasKedua extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 8),
+                padding: const EdgeInsets.fromLTRB(5, 10, 5, 8),
                 child: Center(
                   child: Text(
                     "Daftar Barang Masuk",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w900, 
                     ),
                   ),
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Text(
+                  "PT. Makmur Sentosa",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontStyle: FontStyle.italic),
+                ),
+              ),
+              Container(
+                height: 600,
+                child: ListView(
+                  children: [
+                    ListTile(
+                      leading: Text('1'),
+                      title: Text('Meja merek A'),
+                      subtitle: Text('20 buah'),
+                      trailing: Icon(
+                        Icons.favorite,
+                        color: Colors.red,
+                        ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         )
